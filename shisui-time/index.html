@@ -8,15 +8,16 @@
   <title>十穗時光｜手作蛋捲・伴手禮</title>
   <style>
     :root{
-      --bg:#f6f0e6;
-      --paper:#fffaf3;
-      --ink:#43392f;
-      --muted:#7b6d61;
-      --line:#e2d6c7;
-      --accent:#9c714a;
-      --soft:#efe3d3;
+      --bg:#f7f2ea;
+      --paper:#fffdf8;
+      --ink:#40362e;
+      --muted:#776b61;
+      --line:#e7ddd0;
+      --accent:#9a704c;
+      --accent-soft:#f3e8da;
       --linegreen:#06c755;
       --shopee:#ee4d2d;
+      --shadow:0 12px 30px rgba(70,54,40,.06);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -24,59 +25,134 @@
       margin:0;
       font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
       color:var(--ink);
-      background:linear-gradient(180deg,#faf6ef 0%,var(--bg) 100%);
+      background:linear-gradient(180deg,#fbf8f3 0%,var(--bg) 100%);
       line-height:1.65;
     }
-    .wrap{max-width:820px;margin:0 auto;padding:28px 18px 56px}
+    .wrap{max-width:860px;margin:0 auto;padding:28px 18px 56px}
+    .panel{
+      margin-top:22px;
+      padding:28px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
     .hero{
       text-align:center;
-      padding:48px 24px 36px;
+      padding:52px 28px 34px;
+      background:var(--paper);
       border:1px solid var(--line);
-      background:rgba(255,250,243,.96);
       border-radius:26px;
-      box-shadow:0 12px 34px rgba(67,57,47,.06);
+      box-shadow:var(--shadow);
     }
-    .eyebrow{font-size:12px;letter-spacing:.24em;color:var(--accent);font-weight:700}
-    h1{font-size:clamp(36px,8vw,58px);letter-spacing:.12em;margin:10px 0 4px;font-weight:700}
-    .sub{margin:0;color:var(--muted);font-size:16px;letter-spacing:.06em}
-    .tagline{margin:22px auto 0;max-width:560px;font-size:15px;color:var(--muted)}
-    .ingredient-note{margin:16px auto 0;max-width:600px;padding:12px 16px;border-radius:14px;background:#f4eadc;color:#66584b;font-size:14px}
-    section{margin-top:26px;padding:26px 22px;background:var(--paper);border:1px solid var(--line);border-radius:20px}
-    h2{margin:0 0 18px;font-size:21px;letter-spacing:.08em}
-    .menu{display:grid;gap:12px}
-    .item{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--line)}
-    .item:last-child{border-bottom:0;padding-bottom:0}
-    .item:first-child{padding-top:0}
-    .name{font-weight:700;font-size:17px}
-    .desc{font-size:13px;color:var(--muted);margin-top:3px}
-    .price{white-space:nowrap;font-weight:800;font-size:17px;color:var(--accent)}
-    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .info-card{padding:17px 12px;text-align:center;border-radius:14px;background:var(--soft)}
-    .info-card strong{display:block;font-size:15px;margin-bottom:2px}
-    .info-card span{font-size:13px;color:var(--muted)}
-    .info-link{display:block;text-decoration:none;color:inherit;transition:.2s ease}
-    .info-link:hover{transform:translateY(-1px)}
-    .shop-note{margin-top:12px;text-align:center}
-    .shop-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--shopee);color:#fff;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:999px;box-shadow:0 8px 18px rgba(238,77,45,.16);transition:.2s ease}
-    .shop-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(238,77,45,.22)}
-    .notice{margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:#fbf5ec;border-radius:8px;color:var(--muted);font-size:14px}
-    .line-box{display:grid;grid-template-columns:1fr 170px;gap:22px;align-items:center}
-    .line-copy p{margin:0 0 14px;color:var(--muted);font-size:14px}
-    .line-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--linegreen);color:#fff;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:999px;box-shadow:0 8px 18px rgba(6,199,85,.18);transition:.2s ease}
-    .line-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(6,199,85,.24)}
-    .line-qr{width:150px;max-width:100%;display:block;margin:auto;border-radius:14px;background:#fff;padding:8px;border:1px solid #edf0eb}
+    .eyebrow{font-size:12px;letter-spacing:.24em;color:var(--accent);font-weight:800}
+    h1{font-size:clamp(38px,8vw,60px);letter-spacing:.12em;margin:10px 0 4px;line-height:1.2}
+    .sub{margin:0;color:var(--muted);font-size:16px;letter-spacing:.08em}
+    .tagline{margin:20px auto 0;max-width:560px;font-size:15px;color:var(--muted)}
+    .ingredient-note{
+      margin:20px auto 0;
+      max-width:650px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+    .ingredient-chip{
+      min-height:78px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:12px 10px;
+      border-radius:14px;
+      background:var(--accent-soft);
+      border:1px solid #eadbca;
+    }
+    .ingredient-chip strong{font-size:14px;margin-bottom:2px}
+    .ingredient-chip span{font-size:12px;color:var(--muted)}
+    .section-title{margin:0 0 18px;font-size:21px;letter-spacing:.08em}
+
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .menu-card{
+      min-height:118px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:18px;
+      background:#fffaf3;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .menu-name{font-weight:800;font-size:16px;line-height:1.45}
+    .menu-desc{font-size:13px;color:var(--muted);margin-top:4px}
+    .menu-price{margin-top:14px;font-weight:800;font-size:18px;color:var(--accent)}
+
+    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .info-link{display:block;text-decoration:none;color:inherit}
+    .info-card{
+      min-height:132px;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:18px 14px;
+      border-radius:16px;
+      background:#f5ecdf;
+      border:1px solid #eadfce;
+      transition:.2s ease;
+    }
+    .info-link:hover .info-card{transform:translateY(-2px)}
+    .info-card strong{display:block;font-size:16px;margin-bottom:5px}
+    .info-card span{font-size:13px;color:var(--muted);line-height:1.55}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:11px 18px;
+      border-radius:999px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      font-size:14px;
+      transition:.2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-shopee{background:var(--shopee);box-shadow:0 8px 18px rgba(238,77,45,.16)}
+    .btn-line{background:var(--linegreen);box-shadow:0 8px 18px rgba(6,199,85,.18)}
+    .notice{
+      margin-top:16px;
+      padding:15px 17px;
+      background:#fbf6ef;
+      border:1px solid var(--line);
+      border-left:4px solid var(--accent);
+      border-radius:12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .notice strong{color:var(--ink)}
+
+    .line-box{display:grid;grid-template-columns:1fr 160px;gap:24px;align-items:center}
+    .line-copy p{margin:0;color:var(--muted);font-size:14px}
     .line-small{font-size:12px;color:var(--muted);margin-top:10px}
+    .line-qr{width:150px;max-width:100%;display:block;margin:auto;border-radius:14px;background:#fff;padding:8px;border:1px solid #edf0eb}
     footer{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
-    @media (max-width:560px){
+
+    @media (max-width:640px){
       .wrap{padding:14px 12px 36px}
-      .hero{padding:40px 18px 30px;border-radius:18px}
-      section{padding:22px 18px;border-radius:16px}
+      .hero{padding:40px 18px 28px;border-radius:20px}
+      .panel{padding:20px 16px;border-radius:18px}
+      .ingredient-note{grid-template-columns:1fr;gap:8px}
+      .ingredient-chip{min-height:auto;padding:11px 12px}
+      .menu-grid{grid-template-columns:1fr}
+      .menu-card{min-height:104px}
       .info-grid{grid-template-columns:1fr}
-      .info-card{text-align:left}
-      .item{gap:10px}
+      .info-card{min-height:96px;align-items:flex-start;text-align:left;padding:16px}
       .line-box{grid-template-columns:1fr;text-align:center}
-      .line-qr{width:132px}
-      .line-btn,.shop-btn{width:100%}
+      .line-qr{width:136px}
+      .actions{flex-direction:column}
+      .btn{width:100%}
     }
   </style>
 </head>
@@ -86,52 +162,101 @@
       <div class="eyebrow">HANDMADE EGG ROLLS</div>
       <h1>十穗時光</h1>
       <p class="sub">手作蛋捲・伴手禮</p>
-      <p class="tagline">接單後新鮮製作，把酥香奶香留給值得分享的好時光。</p>
-      <div class="ingredient-note">使用總統牌無鹽奶油，以乳脂製成，非人造奶油、非植物性酥油。蛋捲含雞蛋與乳製品，<strong>蛋奶素可食用</strong>。</div>
+      <p class="tagline">接單後新鮮製作，將酥香奶香留給每一份值得分享的好時光。</p>
+
+      <div class="ingredient-note" aria-label="產品特色">
+        <div class="ingredient-chip">
+          <strong>總統牌無鹽奶油</strong>
+          <span>以乳脂製成</span>
+        </div>
+        <div class="ingredient-chip">
+          <strong>非人造奶油</strong>
+          <span>不使用植物性酥油</span>
+        </div>
+        <div class="ingredient-chip">
+          <strong>蛋奶素可食</strong>
+          <span>含雞蛋與乳製品</span>
+        </div>
+      </div>
     </header>
 
-    <section aria-labelledby="menu-title">
-      <h2 id="menu-title">蛋捲菜單</h2>
-      <div class="menu">
-        <div class="item">
-          <div><div class="name">原味奶香蛋捲</div><div class="desc">經典奶香・酥脆口感</div></div>
-          <div class="price">NT$30 / 支</div>
-        </div>
-        <div class="item">
-          <div><div class="name">厚蛋捲｜原味奶香</div><div class="desc">層次更厚實・奶香更飽滿</div></div>
-          <div class="price">NT$40 / 支</div>
-        </div>
-        <div class="item">
-          <div><div class="name">低糖｜原味奶香</div><div class="desc">降低甜度・保留奶香</div></div>
-          <div class="price">NT$30 / 支</div>
-        </div>
-        <div class="item">
-          <div><div class="name">厚蛋捲｜低糖原味奶香</div><div class="desc">厚實層次・清爽低甜</div></div>
-          <div class="price">NT$40 / 支</div>
-        </div>
+    <section class="panel" aria-labelledby="menu-title">
+      <h2 class="section-title" id="menu-title">蛋捲菜單</h2>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <div>
+            <div class="menu-name">原味奶香蛋捲</div>
+            <div class="menu-desc">經典奶香・酥脆口感</div>
+          </div>
+          <div class="menu-price">NT$30 / 支</div>
+        </article>
+
+        <article class="menu-card">
+          <div>
+            <div class="menu-name">厚蛋捲｜原味奶香</div>
+            <div class="menu-desc">層次更厚實・奶香更飽滿</div>
+          </div>
+          <div class="menu-price">NT$40 / 支</div>
+        </article>
+
+        <article class="menu-card">
+          <div>
+            <div class="menu-name">低糖｜原味奶香</div>
+            <div class="menu-desc">降低甜度・保留奶香</div>
+          </div>
+          <div class="menu-price">NT$30 / 支</div>
+        </article>
+
+        <article class="menu-card">
+          <div>
+            <div class="menu-name">厚蛋捲｜低糖原味奶香</div>
+            <div class="menu-desc">厚實層次・清爽低甜</div>
+          </div>
+          <div class="menu-price">NT$40 / 支</div>
+        </article>
       </div>
     </section>
 
-    <section aria-labelledby="order-title">
-      <h2 id="order-title">取貨與製作</h2>
+    <section class="panel" aria-labelledby="order-title">
+      <h2 class="section-title" id="order-title">取貨與製作</h2>
       <div class="info-grid">
-        <div class="info-card"><strong>賣貨便</strong><span>超商取貨</span></div>
+        <div class="info-card">
+          <strong>賣貨便</strong>
+          <span>超商取貨<br>連結後續補上</span>
+        </div>
+
         <a class="info-link" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener" aria-label="前往十穗時光蝦皮賣場">
-          <div class="info-card"><strong>蝦皮</strong><span>點此前往賣場</span></div>
+          <div class="info-card">
+            <strong>蝦皮</strong>
+            <span>可直接進入賣場下單</span>
+          </div>
         </a>
-        <div class="info-card"><strong>自取</strong><span>新北市新店區中正路263巷<br>群惠耳鼻喉科前</span></div>
+
+        <div class="info-card">
+          <strong>自取</strong>
+          <span>新北市新店區中正路263巷<br>群惠耳鼻喉科前</span>
+        </div>
       </div>
-      <div class="shop-note"><a class="shop-btn" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener">前往蝦皮賣場</a></div>
-      <div class="notice"><strong>製作時間：</strong>下訂後約 3 天完成。手工現做，如遇訂單量較大，將另行告知可取貨日期。</div>
+
+      <div class="actions">
+        <a class="btn btn-shopee" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener">前往蝦皮賣場</a>
+      </div>
+
+      <div class="notice">
+        <strong>製作時間｜下訂後約 3 天</strong><br>
+        手工現做，如遇訂單量較大，將另行告知可取貨日期。
+      </div>
     </section>
 
-    <section aria-labelledby="line-title">
-      <h2 id="line-title">LINE 聯絡我們</h2>
+    <section class="panel" aria-labelledby="line-title">
+      <h2 class="section-title" id="line-title">LINE 聯絡我們</h2>
       <div class="line-box">
         <div class="line-copy">
-          <p>想詢問口味、數量、送禮需求或自取安排，可直接加入十穗時光 LINE 官方帳號。</p>
-          <a class="line-btn" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a>
-          <div class="line-small">手機點按按鈕即可加入；電腦瀏覽可掃右側 QR Code。</div>
+          <p>口味、數量、送禮需求或自取安排，都可直接透過 LINE 官方帳號詢問。</p>
+          <div class="actions">
+            <a class="btn btn-line" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a>
+          </div>
+          <div class="line-small">手機可直接點按加入；電腦瀏覽可掃描右側 QR Code。</div>
         </div>
         <div>
           <a href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener" aria-label="加入十穗時光 LINE 官方帳號">
