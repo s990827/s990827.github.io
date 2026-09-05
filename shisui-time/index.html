@@ -38,13 +38,29 @@
       box-shadow:var(--shadow);
     }
     .hero{
+      position:relative;
+      overflow:hidden;
       text-align:center;
-      padding:52px 28px 34px;
-      background:var(--paper);
+      padding:72px 28px 46px;
+      min-height:520px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      background:
+        linear-gradient(180deg,rgba(255,253,248,.76),rgba(255,253,248,.88)),
+        url('assets/hero-bg.jpg') center 48%/cover no-repeat;
       border:1px solid var(--line);
       border-radius:26px;
       box-shadow:var(--shadow);
     }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      box-shadow:inset 0 -90px 110px rgba(255,253,248,.16);
+    }
+    .hero>*{position:relative;z-index:1}
     .eyebrow{font-size:12px;letter-spacing:.24em;color:var(--accent);font-weight:800}
     h1{font-size:clamp(38px,8vw,60px);letter-spacing:.12em;margin:10px 0 4px;line-height:1.2}
     .sub{margin:0;color:var(--muted);font-size:16px;letter-spacing:.08em}
@@ -63,8 +79,9 @@
       justify-content:center;
       padding:14px 12px;
       border-radius:14px;
-      background:var(--accent-soft);
-      border:1px solid #eadbca;
+      background:rgba(243,232,218,.90);
+      border:1px solid rgba(234,219,202,.95);
+      backdrop-filter:blur(4px);
     }
     .ingredient-chip strong{font-size:14px;margin-bottom:5px}
     .ingredient-chip span{font-size:12.5px;color:var(--muted);line-height:1.6}
@@ -141,7 +158,7 @@
 
     @media (max-width:640px){
       .wrap{padding:14px 12px 36px}
-      .hero{padding:40px 18px 28px;border-radius:20px}
+      .hero{padding:52px 18px 30px;min-height:480px;border-radius:20px;background-position:center 42%}
       .panel{padding:20px 16px;border-radius:18px}
       .ingredient-note{grid-template-columns:1fr;gap:8px}
       .ingredient-chip{min-height:auto;padding:13px 14px}
