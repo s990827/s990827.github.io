@@ -1,85 +1,67 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>十穗時光｜手作蛋捲・伴手禮</title>
-  <meta name="description" content="十穗時光手作蛋捲。使用總統牌無鹽奶油，天然乳脂製成、非植物性酥油；單支獨立印花包裝，蛋奶素可食。">
-  <meta name="theme-color" content="#f8f2e9">
-  <style>
-    :root{--bg:#f8f3ec;--paper:#fffdf9;--ink:#473a31;--muted:#837166;--accent:#ad765a;--accent-dark:#885943;--accent-soft:#f3e4d8;--line:#e8d9cc;--line-green:#06c755;--shopee:#ee4d2d;--shadow:0 16px 38px rgba(85,60,45,.09)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fcfaf6 0%,var(--bg) 100%);line-height:1.7}img{display:block;width:100%}.wrap{width:min(940px,calc(100% - 32px));margin:auto;padding:28px 0 60px}
-    .hero{position:relative;min-height:620px;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);background:linear-gradient(rgba(255,250,244,.46),rgba(255,250,244,.58)),url('assets/hero-bg.jpg') center/cover no-repeat}
-    .hero-content{width:min(760px,calc(100% - 40px));padding:46px 36px;text-align:center;background:rgba(255,253,249,.72);border:1px solid rgba(255,255,255,.78);border-radius:24px;backdrop-filter:blur(3px);box-shadow:0 18px 42px rgba(84,58,43,.08)}
-    .eyebrow{margin-bottom:10px;color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.28em}h1{margin:0;font-size:clamp(42px,7vw,68px);line-height:1.18;letter-spacing:.12em}.sub{margin:8px 0 0;color:var(--muted);font-size:17px;letter-spacing:.10em}.tagline{max-width:600px;margin:26px auto 0;color:#756257;font-size:15px}
-    .features{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{min-height:126px;display:flex;flex-direction:column;justify-content:center;padding:18px 14px;background:rgba(248,235,223,.94);border:1px solid rgba(219,193,171,.82);border-radius:16px}.feature strong{margin-bottom:7px;font-size:15px}.feature span{color:var(--muted);font-size:13px;line-height:1.65}
-    .panel{margin-top:28px;padding:32px;background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}.section-title{margin:0 0 6px;font-size:23px;letter-spacing:.08em}.section-lead{margin:0 0 22px;color:var(--muted);font-size:14px}
-    .gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px}.photo-card{position:relative;overflow:hidden;min-height:330px;border-radius:18px;background:#f4e8dc;border:1px solid var(--line)}.photo-card img{height:100%;object-fit:cover;transition:.35s ease}.photo-card:nth-child(2) img{object-position:52% 38%}.photo-card:nth-child(3) img{object-position:62% 54%}.photo-card:hover img{transform:scale(1.025)}.photo-label{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 15px;color:#514035;background:rgba(255,253,249,.88);border:1px solid rgba(255,255,255,.7);border-radius:13px;backdrop-filter:blur(7px);font-size:13px}.photo-label strong{display:block;margin-bottom:2px;font-size:14px}
-    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.menu-card{min-height:134px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#fff9f2;border:1px solid var(--line);border-radius:17px}.menu-name{font-size:17px;font-weight:800}.menu-desc{margin-top:5px;color:var(--muted);font-size:13px}.menu-price{margin-top:18px;color:var(--accent-dark);font-size:19px;font-weight:900}
-    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{min-height:130px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px 14px;text-align:center;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:16px}.info-card strong{margin-bottom:5px;font-size:16px}.info-card span{color:var(--muted);font-size:13px}.info-link{color:inherit;text-decoration:none}.info-link .info-card{height:100%;transition:.2s ease}.info-link:hover .info-card{transform:translateY(-2px);box-shadow:0 10px 22px rgba(80,55,40,.08)}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;color:#fff;text-decoration:none;font-size:14px;font-weight:800;transition:.2s ease}.btn:hover{transform:translateY(-1px)}.btn-shopee{background:var(--shopee);box-shadow:0 9px 20px rgba(238,77,45,.17)}.btn-line{background:var(--line-green);box-shadow:0 9px 20px rgba(6,199,85,.18)}
-    .notice{margin-top:17px;padding:16px 18px;color:var(--muted);background:#fbf5ee;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;font-size:14px}.notice strong{color:var(--ink)}
-    .line-box{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px}.line-copy p{margin:0;color:var(--muted);font-size:14px}.line-small{margin-top:11px;color:var(--muted);font-size:12px}.line-qr{width:156px;margin:auto;padding:8px;background:#fff;border:1px solid #ece6dd;border-radius:16px}footer{margin-top:30px;text-align:center;color:var(--muted);font-size:12px}
-    @media(max-width:700px){.wrap{width:calc(100% - 22px);padding-top:12px}.hero{min-height:590px;border-radius:20px;background-position:center}.hero-content{width:calc(100% - 24px);padding:34px 17px}.features,.gallery,.menu-grid,.info-grid,.line-box{grid-template-columns:1fr}.feature{min-height:auto;padding:14px}.panel{margin-top:18px;padding:22px 16px;border-radius:19px}.photo-card{min-height:360px}.menu-card{min-height:118px}.info-card{min-height:96px;align-items:flex-start;text-align:left}.actions{flex-direction:column}.btn{width:100%}.line-box{text-align:center}.line-qr{width:140px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>十穗時光｜手作蛋捲・伴手禮</title>
+<meta name="description" content="十穗時光手作蛋捲。總統牌無鹽奶油、單支獨立印花包裝、蛋奶素可食。">
+<meta name="theme-color" content="#f8f2e9">
+<style>
+:root{--bg:#f8f3ec;--paper:#fffdf9;--ink:#473a31;--muted:#837166;--accent:#ad765a;--accent-dark:#885943;--accent-soft:#f3e4d8;--line:#e8d9cc;--green:#06c755;--shopee:#ee4d2d;--shadow:0 16px 38px rgba(85,60,45,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fcfaf6,var(--bg));line-height:1.7}img{display:block;width:100%}.wrap{width:min(980px,calc(100% - 32px));margin:auto;padding:28px 0 60px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.hero-copy,.hero-photo,.panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}.hero-copy{padding:46px 34px;display:flex;flex-direction:column;justify-content:center}.hero-photo{overflow:hidden;min-height:620px}.hero-photo img{height:100%;object-fit:cover;object-position:center}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.28em}h1{margin:9px 0 4px;font-size:clamp(42px,7vw,66px);line-height:1.15;letter-spacing:.1em}.sub{margin:0;color:var(--muted);font-size:17px;letter-spacing:.08em}.tagline{margin:24px 0 0;color:#756257;font-size:15px}.features{margin-top:24px;display:grid;gap:10px}.feature{padding:15px 16px;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:15px}.feature strong{display:block;margin-bottom:3px;font-size:15px}.feature span{color:var(--muted);font-size:13px}.panel{margin-top:26px;padding:30px}.section-title{margin:0 0 6px;font-size:23px;letter-spacing:.08em}.section-lead{margin:0 0 22px;color:var(--muted);font-size:14px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#f4e8dc}.photo-card img{aspect-ratio:4/5;object-fit:cover}.feature-copy{padding:14px 15px}.feature-copy strong{display:block;font-size:15px}.feature-copy span{color:var(--muted);font-size:13px}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.menu-card{min-height:132px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#fff9f2;border:1px solid var(--line);border-radius:17px}.menu-name{font-size:17px;font-weight:800}.menu-desc{margin-top:5px;color:var(--muted);font-size:13px}.menu-price{margin-top:18px;color:var(--accent-dark);font-size:19px;font-weight:900}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{min-height:124px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px 14px;text-align:center;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:16px}.info-card strong{margin-bottom:5px;font-size:16px}.info-card span{color:var(--muted);font-size:13px}.info-link{text-decoration:none;color:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;color:#fff;text-decoration:none;font-size:14px;font-weight:800}.btn-shopee{background:var(--shopee)}.btn-line{background:var(--green)}.notice{margin-top:17px;padding:16px 18px;color:var(--muted);background:#fbf5ee;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;font-size:14px}.notice strong{color:var(--ink)}.line-box{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px}.line-copy p{margin:0;color:var(--muted);font-size:14px}.line-small{margin-top:10px;color:var(--muted);font-size:12px}.line-qr{width:156px;margin:auto;padding:8px;background:#fff;border:1px solid #ece6dd;border-radius:16px}footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:760px){.wrap{width:calc(100% - 22px);padding-top:12px}.hero{grid-template-columns:1fr}.hero-copy{padding:34px 20px}.hero-photo{min-height:auto}.hero-photo img{aspect-ratio:4/5;height:auto}.panel{margin-top:18px;padding:22px 16px;border-radius:19px}.gallery,.menu-grid,.info-grid,.line-box{grid-template-columns:1fr}.menu-card{min-height:116px}.info-card{min-height:94px;align-items:flex-start;text-align:left}.actions{flex-direction:column}.btn{width:100%}.line-box{text-align:center}.line-qr{width:140px}}
+</style>
 </head>
-<body>
-<main class="wrap">
-  <header class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">HANDMADE EGG ROLLS</div>
-      <h1>十穗時光</h1>
-      <p class="sub">手作蛋捲・伴手禮</p>
-      <p class="tagline">接單後新鮮製作，將酥香奶香留給每一份值得分享的好時光。</p>
-      <div class="features" aria-label="產品特色">
-        <div class="feature"><strong>總統牌無鹽奶油</strong><span>天然乳脂製成，非植物性酥油<br>香氣濃郁，成分單純</span></div>
-        <div class="feature"><strong>單支獨立印花包裝</strong><span>一支一袋，食用方便<br>精緻好攜帶，送禮更有心意</span></div>
-        <div class="feature"><strong>蛋奶素可食</strong><span>含雞蛋與乳製品<br>蛋奶素者可安心選購</span></div>
-      </div>
+<body><main class="wrap">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">HANDMADE EGG ROLLS</div>
+    <h1>十穗時光</h1>
+    <p class="sub">手作蛋捲・伴手禮</p>
+    <p class="tagline">接單後新鮮製作，將酥香奶香留給每一份值得分享的好時光。</p>
+    <div class="features">
+      <div class="feature"><strong>總統牌無鹽奶油</strong><span>天然乳脂製成，非植物性酥油<br>香氣濃郁，成分單純</span></div>
+      <div class="feature"><strong>單支獨立印花包裝</strong><span>一支一袋，食用方便<br>精緻好攜帶，送禮更有心意</span></div>
+      <div class="feature"><strong>蛋奶素可食</strong><span>含雞蛋與乳製品<br>蛋奶素者可安心選購</span></div>
     </div>
-  </header>
+  </div>
+  <div class="hero-photo"><img src="assets/feature-gift.jpg" alt="十穗時光手作蛋捲禮盒"></div>
+</section>
 
-  <section class="panel">
-    <h2 class="section-title">商品展示</h2>
-    <p class="section-lead">一支一袋的獨立包裝，適合日常分享，也適合作為一份簡單精緻的心意。</p>
-    <div class="gallery">
-      <div class="photo-card"><img src="assets/hero-bg.jpg" alt="十穗時光蛋捲禮盒"><div class="photo-label"><strong>精緻送禮</strong>一份酥香，也是一份心意。</div></div>
-      <div class="photo-card"><img src="assets/hero-bg.jpg" alt="十穗時光單支蛋捲包裝"><div class="photo-label"><strong>單支獨立包裝</strong>食用方便，分享也更輕鬆。</div></div>
-      <div class="photo-card"><img src="assets/hero-bg.jpg" alt="十穗時光手作蛋捲"><div class="photo-label"><strong>手作酥香</strong>奶香溫潤，酥脆不膩口。</div></div>
-    </div>
-  </section>
+<section class="panel">
+  <h2 class="section-title">商品特色</h2>
+  <p class="section-lead">從送禮、獨立包裝到酥脆口感，每一項特色都用對應圖片呈現。</p>
+  <div class="gallery">
+    <article class="photo-card"><img src="assets/feature-gift.jpg" alt="精緻送禮蛋捲禮盒"><div class="feature-copy"><strong>精緻送禮</strong><span>包裝雅緻，送禮體面，心意與美味一次到位。</span></div></article>
+    <article class="photo-card"><img src="assets/feature-single.jpg" alt="單支獨立包裝蛋捲"><div class="feature-copy"><strong>單支獨立包裝</strong><span>一支一袋，食用方便，分享與攜帶都更輕鬆。</span></div></article>
+    <article class="photo-card"><img src="assets/feature-crisp.jpg" alt="手作酥香蛋捲"><div class="feature-copy"><strong>手作酥香</strong><span>呈現蛋捲酥脆層次與手作質感。</span></div></article>
+  </div>
+</section>
 
-  <section class="panel" aria-labelledby="menu-title">
-    <h2 class="section-title" id="menu-title">蛋捲菜單</h2>
-    <p class="section-lead">經典奶香與低糖版本，另有厚實層次的厚蛋捲可選。</p>
-    <div class="menu-grid">
-      <article class="menu-card"><div><div class="menu-name">原味奶香蛋捲</div><div class="menu-desc">經典奶香・酥脆口感</div></div><div class="menu-price">NT$30 / 支</div></article>
-      <article class="menu-card"><div><div class="menu-name">厚蛋捲｜原味奶香</div><div class="menu-desc">層次更厚實・奶香更飽滿</div></div><div class="menu-price">NT$40 / 支</div></article>
-      <article class="menu-card"><div><div class="menu-name">低糖｜原味奶香</div><div class="menu-desc">降低甜度・保留奶香</div></div><div class="menu-price">NT$30 / 支</div></article>
-      <article class="menu-card"><div><div class="menu-name">厚蛋捲｜低糖原味奶香</div><div class="menu-desc">厚實層次・清爽低甜</div></div><div class="menu-price">NT$40 / 支</div></article>
-    </div>
-  </section>
+<section class="panel" aria-labelledby="menu-title">
+  <h2 class="section-title" id="menu-title">蛋捲菜單</h2><p class="section-lead">經典奶香與低糖版本，另有厚實層次的厚蛋捲可選。</p>
+  <div class="menu-grid">
+    <article class="menu-card"><div><div class="menu-name">原味奶香蛋捲</div><div class="menu-desc">經典奶香・酥脆口感</div></div><div class="menu-price">NT$30 / 支</div></article>
+    <article class="menu-card"><div><div class="menu-name">厚蛋捲｜原味奶香</div><div class="menu-desc">層次更厚實・奶香更飽滿</div></div><div class="menu-price">NT$40 / 支</div></article>
+    <article class="menu-card"><div><div class="menu-name">低糖｜原味奶香</div><div class="menu-desc">降低甜度・保留奶香</div></div><div class="menu-price">NT$30 / 支</div></article>
+    <article class="menu-card"><div><div class="menu-name">厚蛋捲｜低糖原味奶香</div><div class="menu-desc">厚實層次・清爽低甜</div></div><div class="menu-price">NT$40 / 支</div></article>
+  </div>
+</section>
 
-  <section class="panel" aria-labelledby="order-title">
-    <h2 class="section-title" id="order-title">訂購與取貨</h2>
-    <p class="section-lead">可選擇超商取貨、蝦皮下單或新店自取。</p>
-    <div class="info-grid">
-      <div class="info-card"><strong>賣貨便</strong><span>超商取貨<br>下單連結後續提供</span></div>
-      <a class="info-link" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener"><div class="info-card"><strong>蝦皮</strong><span>可直接進入賣場<br>完成下單</span></div></a>
-      <div class="info-card"><strong>自取</strong><span>新北市新店區中正路263巷<br>群惠耳鼻喉科前</span></div>
-    </div>
-    <div class="actions"><a class="btn btn-shopee" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener">前往蝦皮賣場</a></div>
-    <div class="notice"><strong>製作時間｜下訂後約 3 天</strong><br>接單後新鮮製作，如遇訂單量較大，將另行告知可取貨日期。</div>
-  </section>
+<section class="panel" aria-labelledby="order-title">
+  <h2 class="section-title" id="order-title">訂購與取貨</h2><p class="section-lead">可選擇超商取貨、蝦皮下單或新店自取。</p>
+  <div class="info-grid">
+    <div class="info-card"><strong>賣貨便</strong><span>超商取貨<br>下單連結後續提供</span></div>
+    <a class="info-link" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener"><div class="info-card"><strong>蝦皮</strong><span>可直接進入賣場<br>完成下單</span></div></a>
+    <div class="info-card"><strong>自取</strong><span>新北市新店區中正路263巷<br>群惠耳鼻喉科前</span></div>
+  </div>
+  <div class="actions"><a class="btn btn-shopee" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener">前往蝦皮賣場</a></div>
+  <div class="notice"><strong>製作時間｜下訂後約 3 天</strong><br>接單後新鮮製作，如遇訂單量較大，將另行告知可取貨日期。</div>
+</section>
 
-  <section class="panel" aria-labelledby="line-title">
-    <h2 class="section-title" id="line-title">LINE 聯絡我們</h2>
-    <div class="line-box">
-      <div class="line-copy"><p>口味、訂購數量、送禮需求或自取安排，都可以直接透過 LINE 官方帳號詢問。</p><div class="actions"><a class="btn btn-line" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a></div><div class="line-small">手機可直接點按加入；電腦瀏覽可掃描 QR Code。</div></div>
-      <div><a href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener"><img class="line-qr" src="https://qr-official.line.me/gs/M_156vvuhr_GW.png?oat_content=qr" alt="十穗時光 LINE 官方帳號 QR Code"></a></div>
-    </div>
-  </section>
-  <footer>十穗時光｜手作蛋捲・伴手禮</footer>
-</main>
-</body>
-</html>
+<section class="panel" aria-labelledby="line-title">
+  <h2 class="section-title" id="line-title">LINE 聯絡我們</h2>
+  <div class="line-box"><div class="line-copy"><p>口味、訂購數量、送禮需求或自取安排，都可以直接透過 LINE 官方帳號詢問。</p><div class="actions"><a class="btn btn-line" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a></div><div class="line-small">手機可直接點按加入；電腦瀏覽可掃描 QR Code。</div></div><div><a href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener"><img class="line-qr" src="https://qr-official.line.me/gs/M_156vvuhr_GW.png?oat_content=qr" alt="十穗時光 LINE 官方帳號 QR Code"></a></div></div>
+</section>
+<footer>十穗時光｜手作蛋捲・伴手禮</footer>
+</main></body></html>
