@@ -16,6 +16,7 @@
       --accent:#9c714a;
       --soft:#efe3d3;
       --linegreen:#06c755;
+      --shopee:#ee4d2d;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -52,8 +53,12 @@
     .info-card{padding:17px 12px;text-align:center;border-radius:14px;background:var(--soft)}
     .info-card strong{display:block;font-size:15px;margin-bottom:2px}
     .info-card span{font-size:13px;color:var(--muted)}
+    .info-link{display:block;text-decoration:none;color:inherit;transition:.2s ease}
+    .info-link:hover{transform:translateY(-1px)}
+    .shop-note{margin-top:12px;text-align:center}
+    .shop-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--shopee);color:#fff;text-decoration:none;font-weight:800;padding:11px 18px;border-radius:999px;box-shadow:0 8px 18px rgba(238,77,45,.16);transition:.2s ease}
+    .shop-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(238,77,45,.22)}
     .notice{margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:#fbf5ec;border-radius:8px;color:var(--muted);font-size:14px}
-    .note{font-size:13px;color:var(--muted);margin:12px 0 0}
     .line-box{display:grid;grid-template-columns:1fr 170px;gap:22px;align-items:center}
     .line-copy p{margin:0 0 14px;color:var(--muted);font-size:14px}
     .line-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--linegreen);color:#fff;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:999px;box-shadow:0 8px 18px rgba(6,199,85,.18);transition:.2s ease}
@@ -70,7 +75,7 @@
       .item{gap:10px}
       .line-box{grid-template-columns:1fr;text-align:center}
       .line-qr{width:132px}
-      .line-btn{width:100%}
+      .line-btn,.shop-btn{width:100%}
     }
   </style>
 </head>
@@ -109,9 +114,12 @@
       <h2 id="order-title">取貨與製作</h2>
       <div class="info-grid">
         <div class="info-card"><strong>賣貨便</strong><span>超商取貨</span></div>
-        <div class="info-card"><strong>蝦皮</strong><span>平台下單取貨</span></div>
+        <a class="info-link" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener" aria-label="前往十穗時光蝦皮賣場">
+          <div class="info-card"><strong>蝦皮</strong><span>點此前往賣場</span></div>
+        </a>
         <div class="info-card"><strong>自取</strong><span>地點於訂單確認後提供</span></div>
       </div>
+      <div class="shop-note"><a class="shop-btn" href="https://tw.shp.ee/WiEsuaid" target="_blank" rel="noopener">前往蝦皮賣場</a></div>
       <div class="notice"><strong>製作時間：</strong>下訂後約 3 天完成。手工現做，如遇訂單量較大，將另行告知可取貨日期。</div>
     </section>
 
