@@ -15,6 +15,7 @@
       --line:#e2d6c7;
       --accent:#9c714a;
       --soft:#efe3d3;
+      --linegreen:#06c755;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -53,6 +54,12 @@
     .info-card span{font-size:13px;color:var(--muted)}
     .notice{margin-top:16px;padding:14px 16px;border-left:3px solid var(--accent);background:#fbf5ec;border-radius:8px;color:var(--muted);font-size:14px}
     .note{font-size:13px;color:var(--muted);margin:12px 0 0}
+    .line-box{display:grid;grid-template-columns:1fr 170px;gap:22px;align-items:center}
+    .line-copy p{margin:0 0 14px;color:var(--muted);font-size:14px}
+    .line-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--linegreen);color:#fff;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:999px;box-shadow:0 8px 18px rgba(6,199,85,.18);transition:.2s ease}
+    .line-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(6,199,85,.24)}
+    .line-qr{width:150px;max-width:100%;display:block;margin:auto;border-radius:14px;background:#fff;padding:8px;border:1px solid #edf0eb}
+    .line-small{font-size:12px;color:var(--muted);margin-top:10px}
     footer{text-align:center;color:var(--muted);font-size:12px;margin-top:28px}
     @media (max-width:560px){
       .wrap{padding:14px 12px 36px}
@@ -61,6 +68,9 @@
       .info-grid{grid-template-columns:1fr}
       .info-card{text-align:left}
       .item{gap:10px}
+      .line-box{grid-template-columns:1fr;text-align:center}
+      .line-qr{width:132px}
+      .line-btn{width:100%}
     }
   </style>
 </head>
@@ -103,7 +113,22 @@
         <div class="info-card"><strong>自取</strong><span>地點於訂單確認後提供</span></div>
       </div>
       <div class="notice"><strong>製作時間：</strong>下訂後約 3 天完成。手工現做，如遇訂單量較大，將另行告知可取貨日期。</div>
-      <p class="note">下單與取貨連結可於後續補上，屆時可直接從本頁前往賣貨便或蝦皮。</p>
+    </section>
+
+    <section aria-labelledby="line-title">
+      <h2 id="line-title">LINE 聯絡我們</h2>
+      <div class="line-box">
+        <div class="line-copy">
+          <p>想詢問口味、數量、送禮需求或自取安排，可直接加入十穗時光 LINE 官方帳號。</p>
+          <a class="line-btn" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a>
+          <div class="line-small">手機點按按鈕即可加入；電腦瀏覽可掃右側 QR Code。</div>
+        </div>
+        <div>
+          <a href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener" aria-label="加入十穗時光 LINE 官方帳號">
+            <img class="line-qr" src="https://qr-official.line.me/gs/M_156vvuhr_GW.png?oat_content=qr" alt="十穗時光 LINE 官方帳號 QR Code" loading="lazy">
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>十穗時光｜手作蛋捲・伴手禮</footer>
