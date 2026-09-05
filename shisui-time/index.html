@@ -8,33 +8,30 @@
 <meta name="theme-color" content="#f8f2e9">
 <style>
 :root{--bg:#f8f3ec;--paper:#fffdf9;--ink:#473a31;--muted:#837166;--accent:#ad765a;--accent-dark:#885943;--accent-soft:#f3e4d8;--line:#e8d9cc;--green:#06c755;--shopee:#ee4d2d;--shadow:0 16px 38px rgba(85,60,45,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fcfaf6,var(--bg));line-height:1.7}img{display:block;width:100%}.wrap{width:min(980px,calc(100% - 32px));margin:auto;padding:28px 0 60px}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}.hero-copy,.hero-photo,.panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}.hero-copy{padding:46px 34px;display:flex;flex-direction:column;justify-content:center}.hero-photo{overflow:hidden;min-height:620px}.hero-photo img{height:100%;object-fit:cover;object-position:center}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.28em}h1{margin:9px 0 4px;font-size:clamp(42px,7vw,66px);line-height:1.15;letter-spacing:.1em}.sub{margin:0;color:var(--muted);font-size:17px;letter-spacing:.08em}.tagline{margin:24px 0 0;color:#756257;font-size:15px}.features{margin-top:24px;display:grid;gap:10px}.feature{padding:15px 16px;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:15px}.feature strong{display:block;margin-bottom:3px;font-size:15px}.feature span{color:var(--muted);font-size:13px}.panel{margin-top:26px;padding:30px}.section-title{margin:0 0 6px;font-size:23px;letter-spacing:.08em}.section-lead{margin:0 0 22px;color:var(--muted);font-size:14px}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#f4e8dc}.photo-card img{aspect-ratio:4/5;object-fit:cover}.feature-copy{padding:14px 15px}.feature-copy strong{display:block;font-size:15px}.feature-copy span{color:var(--muted);font-size:13px}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.menu-card{min-height:132px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#fff9f2;border:1px solid var(--line);border-radius:17px}.menu-name{font-size:17px;font-weight:800}.menu-desc{margin-top:5px;color:var(--muted);font-size:13px}.menu-price{margin-top:18px;color:var(--accent-dark);font-size:19px;font-weight:900}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{min-height:124px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px 14px;text-align:center;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:16px}.info-card strong{margin-bottom:5px;font-size:16px}.info-card span{color:var(--muted);font-size:13px}.info-link{text-decoration:none;color:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;color:#fff;text-decoration:none;font-size:14px;font-weight:800}.btn-shopee{background:var(--shopee)}.btn-line{background:var(--green)}.notice{margin-top:17px;padding:16px 18px;color:var(--muted);background:#fbf5ee;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;font-size:14px}.notice strong{color:var(--ink)}.line-box{display:grid;grid-template-columns:1fr 170px;align-items:center;gap:30px}.line-copy p{margin:0;color:var(--muted);font-size:14px}.line-small{margin-top:10px;color:var(--muted);font-size:12px}.line-qr{width:156px;margin:auto;padding:8px;background:#fff;border:1px solid #ece6dd;border-radius:16px}footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px}
-@media(max-width:760px){.wrap{width:calc(100% - 22px);padding-top:12px}.hero{grid-template-columns:1fr}.hero-copy{padding:34px 20px}.hero-photo{min-height:auto}.hero-photo img{aspect-ratio:4/5;height:auto}.panel{margin-top:18px;padding:22px 16px;border-radius:19px}.gallery,.menu-grid,.info-grid,.line-box{grid-template-columns:1fr}.menu-card{min-height:116px}.info-card{min-height:94px;align-items:flex-start;text-align:left}.actions{flex-direction:column}.btn{width:100%}.line-box{text-align:center}.line-qr{width:140px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:linear-gradient(180deg,#fcfaf6,var(--bg));line-height:1.7}.wrap{width:min(940px,calc(100% - 32px));margin:auto;padding:28px 0 60px}.hero,.panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}.hero{padding:58px 40px;text-align:center}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.28em}h1{margin:9px 0 4px;font-size:clamp(42px,7vw,66px);line-height:1.15;letter-spacing:.1em}.sub{margin:0;color:var(--muted);font-size:17px;letter-spacing:.08em}.tagline{margin:24px auto 0;max-width:620px;color:#756257;font-size:15px}.features{margin:28px auto 0;max-width:760px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{padding:18px 16px;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:16px;min-height:118px;display:flex;flex-direction:column;justify-content:center}.feature strong{display:block;margin-bottom:5px;font-size:15px}.feature span{color:var(--muted);font-size:13px}.panel{margin-top:26px;padding:30px}.section-title{margin:0 0 6px;font-size:23px;letter-spacing:.08em}.section-lead{margin:0 0 22px;color:var(--muted);font-size:14px}.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.benefit-card{padding:22px 18px;background:#fff9f2;border:1px solid var(--line);border-radius:18px;min-height:150px}.benefit-card strong{display:block;margin-bottom:8px;font-size:16px;color:var(--accent-dark)}.benefit-card span{color:var(--muted);font-size:13.5px;line-height:1.75}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.menu-card{min-height:132px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:#fff9f2;border:1px solid var(--line);border-radius:17px}.menu-name{font-size:17px;font-weight:800}.menu-desc{margin-top:5px;color:var(--muted);font-size:13px}.menu-price{margin-top:18px;color:var(--accent-dark);font-size:19px;font-weight:900}.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.info-card{min-height:124px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:18px 14px;text-align:center;background:var(--accent-soft);border:1px solid #ead7c7;border-radius:16px}.info-card strong{margin-bottom:5px;font-size:16px}.info-card span{color:var(--muted);font-size:13px}.info-link{text-decoration:none;color:inherit}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}.btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:11px 20px;border-radius:999px;color:#fff;text-decoration:none;font-size:14px;font-weight:800}.btn-shopee{background:var(--shopee)}.btn-line{background:var(--green)}.notice{margin-top:17px;padding:16px 18px;color:var(--muted);background:#fbf5ee;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;font-size:14px}.notice strong{color:var(--ink)}.line-copy p{margin:0;color:var(--muted);font-size:14px}.line-small{margin-top:10px;color:var(--muted);font-size:12px}footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:760px){.wrap{width:calc(100% - 22px);padding-top:12px}.hero{padding:38px 18px}.features,.benefit-grid,.menu-grid,.info-grid{grid-template-columns:1fr}.feature{min-height:auto}.panel{margin-top:18px;padding:22px 16px;border-radius:19px}.menu-card{min-height:116px}.info-card{min-height:94px;align-items:flex-start;text-align:left}.actions{flex-direction:column}.btn{width:100%}}
 </style>
 </head>
 <body><main class="wrap">
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow">HANDMADE EGG ROLLS</div>
-    <h1>十穗時光</h1>
-    <p class="sub">手作蛋捲・伴手禮</p>
-    <p class="tagline">接單後新鮮製作，將酥香奶香留給每一份值得分享的好時光。</p>
-    <div class="features">
-      <div class="feature"><strong>總統牌無鹽奶油</strong><span>天然乳脂製成，非植物性酥油<br>香氣濃郁，成分單純</span></div>
-      <div class="feature"><strong>單支獨立印花包裝</strong><span>一支一袋，食用方便<br>精緻好攜帶，送禮更有心意</span></div>
-      <div class="feature"><strong>蛋奶素可食</strong><span>含雞蛋與乳製品<br>蛋奶素者可安心選購</span></div>
-    </div>
+<header class="hero">
+  <div class="eyebrow">HANDMADE EGG ROLLS</div>
+  <h1>十穗時光</h1>
+  <p class="sub">手作蛋捲・伴手禮</p>
+  <p class="tagline">接單後新鮮製作，將酥香奶香留給每一份值得分享的好時光。</p>
+  <div class="features">
+    <div class="feature"><strong>總統牌無鹽奶油</strong><span>天然乳脂製成，非植物性酥油<br>香氣濃郁，成分單純</span></div>
+    <div class="feature"><strong>單支獨立印花包裝</strong><span>一支一袋，食用方便<br>精緻好攜帶，送禮更有心意</span></div>
+    <div class="feature"><strong>蛋奶素可食</strong><span>含雞蛋與乳製品<br>蛋奶素者可安心選購</span></div>
   </div>
-  <div class="hero-photo"><img src="assets/feature-gift.jpg" alt="十穗時光手作蛋捲禮盒"></div>
-</section>
+</header>
 
 <section class="panel">
   <h2 class="section-title">商品特色</h2>
-  <p class="section-lead">從送禮、獨立包裝到酥脆口感，每一項特色都用對應圖片呈現。</p>
-  <div class="gallery">
-    <article class="photo-card"><img src="assets/feature-gift.jpg" alt="精緻送禮蛋捲禮盒"><div class="feature-copy"><strong>精緻送禮</strong><span>包裝雅緻，送禮體面，心意與美味一次到位。</span></div></article>
-    <article class="photo-card"><img src="assets/feature-single.jpg" alt="單支獨立包裝蛋捲"><div class="feature-copy"><strong>單支獨立包裝</strong><span>一支一袋，食用方便，分享與攜帶都更輕鬆。</span></div></article>
-    <article class="photo-card"><img src="assets/feature-crisp.jpg" alt="手作酥香蛋捲"><div class="feature-copy"><strong>手作酥香</strong><span>呈現蛋捲酥脆層次與手作質感。</span></div></article>
+  <p class="section-lead">以簡潔文字呈現產品重點，不使用商品圖片。</p>
+  <div class="benefit-grid">
+    <article class="benefit-card"><strong>精緻送禮</strong><span>單支印花包裝整齊好看，適合分享與送禮，心意簡單但不失質感。</span></article>
+    <article class="benefit-card"><strong>單支獨立包裝</strong><span>一支一袋，想吃幾支就開幾支，不需要開封後一次吃完，攜帶與分享都方便。</span></article>
+    <article class="benefit-card"><strong>手作酥香</strong><span>接單後新鮮製作，保留蛋捲應有的奶香與酥脆口感。</span></article>
   </div>
 </section>
 
@@ -61,7 +58,7 @@
 
 <section class="panel" aria-labelledby="line-title">
   <h2 class="section-title" id="line-title">LINE 聯絡我們</h2>
-  <div class="line-box"><div class="line-copy"><p>口味、訂購數量、送禮需求或自取安排，都可以直接透過 LINE 官方帳號詢問。</p><div class="actions"><a class="btn btn-line" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a></div><div class="line-small">手機可直接點按加入；電腦瀏覽可掃描 QR Code。</div></div><div><a href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener"><img class="line-qr" src="https://qr-official.line.me/gs/M_156vvuhr_GW.png?oat_content=qr" alt="十穗時光 LINE 官方帳號 QR Code"></a></div></div>
+  <div class="line-copy"><p>口味、訂購數量、送禮需求或自取安排，都可以直接透過 LINE 官方帳號詢問。</p><div class="actions"><a class="btn btn-line" href="https://lin.ee/XiQZuv9" target="_blank" rel="noopener">加入 LINE 好友</a></div><div class="line-small">手機或電腦都可直接點按按鈕加入。</div></div>
 </section>
 <footer>十穗時光｜手作蛋捲・伴手禮</footer>
 </main></body></html>
